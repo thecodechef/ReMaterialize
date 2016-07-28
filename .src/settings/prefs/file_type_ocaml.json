@@ -1,0 +1,6 @@
+{
+  "prefs": {
+    "id": "file_type_ocaml",
+    "scope": "source.ocaml, source.camlp4.ocaml, source.ocamllex, source.ocamlyacc"
+  }
+}

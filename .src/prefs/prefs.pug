@@ -1,0 +1,7 @@
+include ../schemes/_mixins/mixins.pug
+doctype plist
+plist(version="1.0")
+  +dict()
+    +scope(prefs.scope)
+    +dict('settings')
+      +icon(prefs.id)

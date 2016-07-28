@@ -1,0 +1,25 @@
+/
+/
+/
+/  Thank You for Installing Re-Materialize Theme
+/  =============================================
+/
+/ Forked from - Materialize, Materialize - Appbar, Material Theme, Material Theme - Appbar
+/
+/ Go and Support them at:
+/  Materialize:               https://github.com/saadq/Materialize
+/  Materialize - Appbar:      https://github.com/saadq/Materialize-Appbar
+/  Material Theme:            https://github.com/equinusocio/material-theme
+/  Material Theme - Appbar:   https://github.com/equinusocio/material-theme-appbar
+/
+/ Activate the Theme by:
+/ ```json
+/  "color_scheme": "Packages/ReMaterialize/schemes/ReMaterialize.tmTheme",
+/  "theme": "Re-Materialize.sublime-theme"
+/ ```
+/---------------------------------------------
+/ Check out the README.md for more infomation.
+/ --------------------------------------------
+/
+/ Support by going and donate to my patreon https://www.patreon.com/Re-Materialize
+/ ===============================================================================

@@ -1,0 +1,6 @@
+{
+  "prefs": {
+    "id": "file_type_blade",
+    "scope": "text.html.laravel-blade, text.blade"
+  }
+}

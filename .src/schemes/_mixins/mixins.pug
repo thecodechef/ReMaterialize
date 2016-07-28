@@ -1,0 +1,79 @@
+mixin name(name)
+  key name
+  string= name
+
+mixin uuid(uuid)
+  key uuid
+  string= uuid
+
+mixin author(author)
+  key author
+  string= author
+
+mixin csn(csn)
+  key colorSpaceName
+  string= csn
+
+mixin class(klass)
+  key semanticClass
+  string= klass
+
+mixin array(name)
+  if name
+    key= name
+    array
+      if block
+        block
+  else
+    array
+      if block
+        block
+
+mixin dict(name)
+  if name
+    key= name
+    dict
+      if block
+        block
+  else
+    dict
+      if block
+        block
+
+mixin scope(string)
+  if !string && block
+    key scope
+    string
+      block
+  else if string && !block
+    key scope
+    string= string
+
+mixin foreground(color)
+  key foreground
+  string= color
+
+mixin background(color)
+  key background
+  string= color
+
+mixin fontStyle(style)
+  key fontStyle
+  string= style
+
+mixin popupCss(string)
+  if !string && block
+    key popupCss
+    string
+      block
+  else if string && !block
+    key popupCss
+    string= string
+
+mixin key(key,string)
+  key= key
+  string= string
+
+mixin icon(icon)
+  key icon
+  string= icon

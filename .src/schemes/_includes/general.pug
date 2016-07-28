@@ -1,0 +1,240 @@
++dict()
+  +name('Comments')
+  +scope('comment, punctuation.definition.comment')
+  +dict('settings')
+    +foreground(scheme.comments)
+    +fontStyle('italic')
+
++dict()
+  +name('Variable')
+  +scope('variable, string constant.other.placeholder')
+  +dict('settings')
+    +foreground(scheme.foreground)
+
++dict()
+  +name('Colors')
+  +scope('constant.other.color')
+  +dict('settings')
+    +foreground(scheme.base.white)
+
++dict()
+  +name('Invalid')
+  +scope('invalid, invalid.illegal, invalid.broken')
+  +dict('settings')
+    +foreground(scheme.base.white)
+    +background(scheme.base.red)
+
++dict()
+  +name('Unimplemented')
+  +scope('invalid.unimplemented')
+  +dict('settings')
+    +foreground(scheme.base.white)
+    +background(scheme.base.green)
+
++dict()
+  +name('Invalid deprecated')
+  +scope('invalid.deprecated')
+  +dict('settings')
+    +foreground(scheme.base.white)
+    +background(scheme.base.purple)
+
++dict()
+  +name('Keyword, Storage')
+  +scope('keyword, storage.type, storage.modifier')
+  +dict('settings')
+    +foreground(scheme.base.purple)
+
++dict()
+  +name('Operator, Misc')
+  +scope()
+    | ,keyword.operator,
+    | ,constant.other.color,
+    | ,punctuation,
+    | ,meta.tag,
+    | ,punctuation.definition.tag,
+    | ,punctuation.separator.inheritance.php,
+    | ,punctuation.definition.tag.html,
+    | ,punctuation.definition.tag.begin.html,
+    | ,punctuation.definition.tag.end.html,
+    | ,punctuation.section.embedded,
+    | ,keyword.other.template,
+    | ,keyword.other.substitution,
+  +dict('settings')
+    +foreground(scheme.base.cyan)
+
++dict()
+  +name('Tag')
+  +scope('entity.name.tag, meta.tag.sgml, markup.deleted.git_gutter')
+  +dict('settings')
+    +foreground(scheme.base.pink)
+
++dict()
+  +name('Function, Special Method, Block Level')
+  +scope('entity.name.function, meta.function-call, variable.function, support.function, keyword.other.special-method, meta.block-level')
+  +dict('settings')
+    +foreground(scheme.base.blue)
+
++dict()
+  +name('Other Variable, String Link')
+  +scope('support.other.variable, string.other.link')
+  +dict('settings')
+    +foreground(scheme.base.pink)
+
++dict()
+  +name('Number, Constant, Function Argument, Tag Attribute, Embedded')
+  +scope('constant.numeric, constant.language, support.constant, constant.character, variable.parameter, keyword.other.unit')
+  +dict('settings')
+    +foreground(scheme.base.orange)
+
++dict()
+  +name('String, Symbols, Inherited Class, Markup Heading')
+  +scope()
+    | ,string,
+    | ,constant.other.symbol,
+    | ,constant.other.key,
+    | ,entity.other.inherited-class,
+    | ,markup.heading,
+    | ,markup.inserted.git_gutter,
+    | ,meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js,
+  +dict('settings')
+     +foreground(scheme.base.green)
+     +fontStyle('normal')
+
++dict()
+  +name('Class, Support')
+  +scope()
+    | ,entity.name.class,
+    | ,entity.name.type.class,
+    | ,support.type,
+    | ,support.class,
+    | ,support.orther.namespace.use.php,meta.use.php,
+    | ,support.other.namespace.php,
+    | ,markup.changed.git_gutter,
+    | ,support.type.sys-types,
+  +dict('settings')
+    +foreground(scheme.base.yellow)
+
++dict()
+  +name('CSS Class and Support')
+  +scope()
+    | ,source.css support.type,
+    | ,source.sass support.type,
+    | ,source.scss support.type,
+    | ,source.less support.type,
+    | ,source.stylus support.type,
+  +dict('settings')
+  +foreground(scheme.base.paleblue)
+
++dict()
+  +name('Sub-methods')
+  +scope('entity.name.module.js, variable.import.parameter.js, variable.other.class.js')
+  +dict('settings')
+    +foreground(scheme.base.red)
+
++dict()
+  +name('Language methods')
+  +scope('variable.language')
+  +dict('settings')
+    +foreground(scheme.base.red)
+    +fontStyle('italic')
+
++dict()
+  +name('entity.name.method.js')
+  +scope('entity.name.method.js')
+  +dict('settings')
+    +foreground(scheme.base.blue)
+
++dict()
+  +name('meta.method.js')
+  +scope('meta.class-method.js entity.name.function.js, variable.function.constructor')
+  +dict('settings')
+    +foreground(scheme.base.blue)
+
++dict()
+  +name('Attributes')
+  +scope('entity.other.attribute-name')
+  +dict('settings')
+    +foreground(scheme.base.purple)
+
++dict()
+  +name('HTML Attributes')
+  +scope()
+    | ,text.html.basic entity.other.attribute-name.html,
+    | ,text.html.basic entity.other.attribute-name,
+  +dict('settings')
+    +foreground(scheme.base.yellow)
+    +fontStyle('italic')
+
++dict()
+  +name('CSS Classes')
+  +scope('entity.other.attribute-name.class')
+  +dict('settings')
+    +foreground(scheme.base.yellow)
+
++dict()
+  +name('CSS Id')
+  +scope('source.sass keyword.control')
+  +dict('settings')
+    +foreground(scheme.base.blue)
+
++dict()
+  +name('Inserted')
+  +scope('markup.inserted')
+  +dict('settings')
+    +foreground(scheme.base.green)
+
++dict()
+  +name('Deleted')
+  +scope('markup.deleted')
+  +dict('settings')
+    +foreground(scheme.base.red)
+
++dict()
+  +name('Changed')
+  +scope('markup.changed')
+  +dict('settings')
+    +foreground(scheme.base.purple)
+
++dict()
+  +name('Regular Expressions')
+  +scope('string.regexp')
+  +dict('settings')
+    +foreground(scheme.base.cyan)
+
++dict()
+  +name('Escape Characters')
+  +scope('constant.character.escape')
+  +dict('settings')
+    +foreground(scheme.base.cyan)
+
++dict()
+  +name('URL')
+  +scope('*url*, *link*, *uri*')
+  +dict('settings')
+    +fontStyle('underline')
+
++dict()
+  +name('Search Results Nums')
+  +scope('constant.numeric.line-number.find-in-files - match')
+  +dict('settings')
+    +foreground(scheme.base.brown)
+
++dict()
+  +name('Search Results Lines')
+  +scope('entity.name.filename.find-in-files')
+  +dict('settings')
+    +foreground(scheme.base.green)
+
++dict()
+  +name('Decorators')
+  +scope('tag.decorator.js entity.name.tag.js, tag.decorator.js punctuation.definition.tag.js')
+  +dict('settings')
+    +foreground(scheme.base.blue)
+    +fontStyle('italic')
+
++dict()
+  +name('ES7 Bind Operator')
+  +scope('source.js constant.other.object.key.js string.unquoted.label.js')
+  +dict('settings')
+    +foreground(scheme.base.red)
+    +fontStyle('italic')

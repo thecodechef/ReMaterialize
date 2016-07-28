@@ -1,0 +1,12 @@
+
+# Files to ignore
+*.cache
+.DS*
+
+# Folders to ignore
+node_modules/
+bower_components/
+compontents/
+vender/
+tmp/
+temp/

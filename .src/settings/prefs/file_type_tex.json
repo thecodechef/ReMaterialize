@@ -1,0 +1,6 @@
+{
+  "prefs": {
+    "id": "file_type_tex",
+    "scope": "text.tex, text.log.latex, text.bibtex"
+  }
+}

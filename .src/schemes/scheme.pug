@@ -1,0 +1,25 @@
+include _mixins/mixins.pug
+doctype plist
+plist(version="1.0")
+  +dict()
+    +name(name)
+    +author(author)
+    +uuid(uuid)
+    +csn('sRGB')
+    +class(semanticClass)
+
+    +array('settings')
+      //- >> Settings
+      include _includes/settings.pug
+      //- >> General
+      include _includes/general.pug
+      //- >> JSON Levels
+      include _includes/json.pug
+      //- >> Markdown Extended
+      include _includes/mde.pug
+      //- >> AceJump
+      include _includes/acejump.pug
+      //- >> Sublime Linter
+      include _includes/sublime_linter.pug
+      //- >> Bracket Highlighter theme
+      include _includes/bracket_highlighter.pug
