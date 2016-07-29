@@ -6,7 +6,6 @@
     <string>Gruntfile Coffee</string>
     <key>fileTypes</key>
     <array>
-      <string>gruntfile.coffee</string>
     </array>
     <key>patterns</key>
     <array>

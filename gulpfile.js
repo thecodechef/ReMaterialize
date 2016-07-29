@@ -213,6 +213,7 @@ gulp.task('bump',(cb) => {
   runSequence(
     'bump-version',
     'commit-version',
+    'create:tag',
     (error) => {
       if (error) {
         $.util.log('Sorry something went wrong bumping version'.bold.red + error.message);
@@ -240,8 +241,11 @@ gulp.task('bump-version',() => {
 gulp.task('commit-version', () => {
  return gulp.src('.')
     .pipe($.git.add())
-    .pipe($.git.commit('Version Bump.'))
-    .pipe($.filter('./package.json'))
+    .pipe($.git.commit('Version Bump.'));
+});
+
+gulp.task('create:tag', () => {
+  return gulp.src('./package.json')
     .pipe($.tagVersion());
 });
 

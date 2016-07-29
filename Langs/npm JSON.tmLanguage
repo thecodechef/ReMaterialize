@@ -6,9 +6,6 @@
     <string>NPM JSON</string>
     <key>fileTypes</key>
     <array>
-      <string>package.json</string>
-      <string>.npmignore</string>
-      <string>.jshintrc</string>
     </array>
     <key>patterns</key>
     <array>

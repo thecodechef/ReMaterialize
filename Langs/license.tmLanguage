@@ -6,9 +6,6 @@
     <string>License</string>
     <key>fileTypes</key>
     <array>
-      <string>LICENSE</string>
-      <string>LICENSE.md</string>
-      <string>license</string>
     </array>
     <key>patterns</key>
     <array>

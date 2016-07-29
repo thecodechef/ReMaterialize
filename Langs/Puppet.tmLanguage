@@ -6,8 +6,6 @@
     <string>Puppet</string>
     <key>fileTypes</key>
     <array>
-      <string>pp</string>
-      <string>puppet.conf</string>
     </array>
     <key>patterns</key>
     <array>

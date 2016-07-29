@@ -902,61 +902,6 @@
       </dict>
       <dict>
         <key>name</key>
-        <string>GitGutter Ignored</string>
-        <key>scope</key>
-        <string>markup.ignored.git_gutter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#E7EAEC</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>GitGutter Untracked</string>
-        <key>scope</key>
-        <string>markup.untracked.git_gutter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#E7EAEC</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>GitGutter Inserted</string>
-        <key>scope</key>
-        <string>markup.inserted.git_gutter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#91B859</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>GitGutter Changed</string>
-        <key>scope</key>
-        <string>markup.changed.git_gutter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#FFC000</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
-        <string>GitGutter Deleted</string>
-        <key>scope</key>
-        <string>markup.deleted.git_gutter</string>
-        <key>settings</key>
-        <dict>
-          <key>foreground</key>
-          <string>#E53935</string>
-        </dict>
-      </dict>
-      <dict>
-        <key>name</key>
         <string>Bracket Curly</string>
         <key>scope</key>
         <string>brackethighlighter.default</string>
