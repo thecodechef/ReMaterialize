@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Puppet",
+    "fileTypes": ["pp","puppet.conf"],
+    "includes": "source.css",
+    "scopeName": "source.css, source.puppet"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "License",
+    "fileTypes": ["LICENSE","LICENSE.md","license"],
+    "includes": "",
+    "scopeName": "license"
+  }
+}

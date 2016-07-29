@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Bower JSON",
+    "fileTypes": ["bower.json",".bowerrc"],
+    "includes": "source.json",
+    "scopeName": "source.json, source.json.bower"
+  }
+}

@@ -18,7 +18,7 @@ const srcPath = './.src',
 //
 
 gulp.task('clean:themes',() => {
-  return del('./*.sublime-theme');
+  return del('./themes/*');
 });
 
 gulp.task('clean:schemes',() => {
@@ -31,6 +31,10 @@ gulp.task('clean:widgets',() => {
 
 gulp.task('clean:prefs',() => {
   return del('./preferences/*');
+});
+
+gulp.task('clean:langs',() => {
+  return del('./Langs/*');
 });
 
 gulp.task('clean:readme',() => {
@@ -47,6 +51,7 @@ gulp.task('build', (cb) => {
     'build:schemes',
     'build:widgets',
     'build:prefs',
+    'build:langs',
     'build:docs',
     (error) => {
       if (error) {
@@ -61,9 +66,6 @@ gulp.task('build', (cb) => {
 
 gulp.task('build:themes',['clean:themes'], () => {
     gulp.src(srcPath + '/themes/*.json')
-      .pipe($.plumber((error)=> {
-        $.util.log('Error Occured with task \'build:themes\''.bold.red + error.message);
-      }))
       .pipe($.include())
       .pipe($.data((file) => {
         var specific = require(srcPath + '/settings/specific/' + path.basename(file.path));
@@ -74,10 +76,7 @@ gulp.task('build:themes',['clean:themes'], () => {
         path.basename = path.basename;
         path.extname = '.sublime-theme';
       }))
-      .pipe(gulp.dest('./'))
-      .on('end', () => {
-        $.util.log('Gulp ran task \'build:themes\' Successfully.'.bold.green);
-      });
+      .pipe(gulp.dest('./themes'));
 });
 
 gulp.task('build:schemes',['clean:schemes'], () => {
@@ -88,7 +87,7 @@ gulp.task('build:schemes',['clean:schemes'], () => {
       .pipe($.flatmap((stream, file) => {
         var basename = path.basename(file.path, path.extname(file.path));
 
-        return gulp.src(srcPath + '/schemes/scheme.pug')
+        return stream = gulp.src(srcPath + '/schemes/scheme.pug')
           .pipe($.data(() => {
             var specific = require(file.path);
             return _.merge(commons,specific);
@@ -128,7 +127,7 @@ gulp.task('build:widget-themes', () => {
     .pipe($.flatmap((stream, file) => {
       var basename = path.basename(file.path, path.extname(file.path));
 
-      return gulp.src(srcPath + '/widgets/widget.pug')
+      return stream = gulp.src(srcPath + '/widgets/widget.pug')
         .pipe($.data(() => {
           var specific = require(file.path);
 
@@ -148,7 +147,7 @@ gulp.task('build:widget-settings',() => {
     .pipe($.flatmap((stream, file) => {
       var basename = path.basename(file.path, path.extname(file.path));
 
-      return gulp.src(srcPath + '/widgets/widget.sublime-settings')
+      return stream = gulp.src(srcPath + '/widgets/widget.sublime-settings')
         .pipe($.data(() => {
           var specific = require(file.path);
 
@@ -163,10 +162,10 @@ gulp.task('build:widget-settings',() => {
 });
 
 gulp.task('build:prefs',['clean:prefs'], () => {
-  return gulp.src(srcPath + '/settings/prefs/*.json')
+  return gulp.src(srcPath + '/prefs/*.json')
     .pipe($.flatmap((stream, file) => {
       var basename = path.basename(file.path, path.extname(file.path));
-      return gulp.src(srcPath + '/prefs/prefs.pug')
+      return stream = gulp.src(srcPath + '/prefs/prefs.pug')
         .pipe($.data(() => {
           var specific = require(file.path);
 
@@ -181,6 +180,25 @@ gulp.task('build:prefs',['clean:prefs'], () => {
     }));
 });
 
+gulp.task('build:langs',['clean:langs'], () => {
+  return gulp.src(srcPath + '/langs/*.json')
+    .pipe($.flatmap((stream, file) => {
+      var basename = path.basename(file.path, path.extname(file.path));
+      return stream = gulp.src(srcPath + '/langs/langs.pug')
+        .pipe($.data(() => {
+          var specific = require(file.path);
+
+          return _.merge(commons, specific);
+        }))
+        .pipe($.pug({pretty: true}))
+        .pipe($.rename((pref) => {
+          pref.basename = basename;
+          pref.extname = '.tmLanguage';
+        }))
+        .pipe(gulp.dest('./Langs'));
+    }));
+});
+
 gulp.task('build:docs',['clean:readme'], () => {
   gulp.src('.verbrc.md')
     .pipe($.verb({dest: 'README.md'}))
@@ -190,6 +208,7 @@ gulp.task('build:docs',['clean:readme'], () => {
 //
 // >> Releasing
 //
+
 gulp.task('bump',(cb) => {
   runSequence(
     'bump-version',
@@ -205,8 +224,12 @@ gulp.task('bump',(cb) => {
   );
 });
 gulp.task('bump-version',() => {
+  function getPackageJSON() {
+    return JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+  }
   gulp.src('./package.json')
-    .pipe($.if((Object.keys(argv).length === 2), $.bump()))
+    .pipe($.if(argv.alpha, $.bump({type: 'prerelease',version: getPackageJSON().version + '.alpha-' + 1})))
+    .pipe($.if(argv.beta, $.bump({type: 'prerelease',version: getPackageJSON().version + '.beta-' + 1})))
     .pipe($.if(argv.pre, $.bump({type: 'prerelease'})))
     .pipe($.if(argv.patch, $.bump()))
     .pipe($.if(argv.minor, $.bump({type: 'minor'})))
@@ -217,20 +240,9 @@ gulp.task('bump-version',() => {
 gulp.task('commit-version', () => {
  return gulp.src('.')
     .pipe($.git.add())
-    .pipe($.git.commit('Version Bump.'.bold.yellow));
-});
-
-//
-// >> Watching
-//
-
-gulp.task('watch', () => {
-  gulp.watch(srcPath + '/themes/**/*.json', ['build:themes']);
-  gulp.watch([srcPath + '/schemes/scheme.pug',srcPath + '/schemes/_includes/*.pug'], ['build:schemes']);
-  gulp.watch(srcPath + '/widgets/widget.*', ['build:widgets']);
-  gulp.watch(srcPath + '/prefs/*.pug', ['build:prefs']);
-  gulp.watch('/docs/*.md', ['build:docs']);
-  gulp.watch(srcPath + '/settings/**/*.json', ['build:schemes', 'build:widgets', 'build:themes','build:prefs']);
+    .pipe($.git.commit('Version Bump.'))
+    .pipe($.filter('./package.json'))
+    .pipe($.tagVersion());
 });
 
 //

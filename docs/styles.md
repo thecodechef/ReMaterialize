@@ -1,30 +1,27 @@
 # Theme styles
-This theme provides 3 styles:
 
-#### Default
+## Default
 ```json
-"theme": "Material-Theme.sublime-theme",
-"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+"theme": "ReMaterialize.sublime-theme",
+"color_scheme": "Packages/ReMaterialize/schemes/ReMaterialize.tmTheme",
 ```
 
-#### Darker
+## Darker
 ```json
-"theme": "Material-Theme-Darker.sublime-theme",
-"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+"theme": "ReMaterialize-Darker.sublime-theme",
+"color_scheme": "Packages/ReMaterialize/schemes/ReMaterialize-Darker.tmTheme",
 ```
 
-#### Lighter
+## Lighter
 ```json
-"theme": "Material-Theme-Lighter.sublime-theme",
-"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Lighter.tmTheme",
+"theme": "ReMaterialize-Lighter.sublime-theme",
+"color_scheme": "Packages/ReMaterialize/schemes/ReMaterialize-Lighter.tmTheme",
 ```
 
-#### Old Color Schemes
-
-You can still use the oldest and **unsupported** color schemes.
-
+## Zenburn
 ```json
-"color_scheme": "Packages/Material Theme/schemes/OLD/Material-Theme.tmTheme",
-"color_scheme": "Packages/Material Theme/schemes/OLD/Material-Theme-Darker.tmTheme",
-"color_scheme": "Packages/Material Theme/schemes/OLD/Material-Theme-Lighter.tmTheme",
+"theme": "ReMaterialize-Zenburn.sublime-theme",
+"color_scheme": "Packages/ReMaterialize/schemes/ReMaterialize-Zenburn.tmTheme",
 ```
+
+**More Styles on Horizon**

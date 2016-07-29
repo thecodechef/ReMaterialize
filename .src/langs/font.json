@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Font",
+    "fileTypes": ["ttf","otf","woff","eot"],
+    "includes": "",
+    "scopeName": "font"
+  }
+}

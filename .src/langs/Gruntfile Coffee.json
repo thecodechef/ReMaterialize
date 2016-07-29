@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Gruntfile Coffee",
+    "fileTypes": ["gruntfile.coffee"],
+    "includes": "source.coffee",
+    "scopeName": "source.coffee, source.coffee.gruntfile"
+  }
+}

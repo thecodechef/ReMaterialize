@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "NPM JSON",
+    "fileTypes": ["package.json",".npmignore",".jshintrc"],
+    "includes": "source.json",
+    "scopeName": "source.json, source.json.npm"
+  }
+}

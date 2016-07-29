@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Gulpfile Coffee",
+    "fileTypes": ["gulpfile.coffee"],
+    "includes": "source.coffee",
+    "scopeName": "source.coffee, source.coffee.gulpfile"
+  }
+}

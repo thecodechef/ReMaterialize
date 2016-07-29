@@ -1,0 +1,10 @@
+include ../schemes/_mixins/mixins.pug
+doctype plist
+plist(version="1.0")
+  +dict()
+    +name(langs.name)
+    +array('fileTypes',langs.fileTypes)
+    +array('patterns')
+      +dict()
+        +key('include',langs.includes)
+    +key('scopeName',langs.scopeName)

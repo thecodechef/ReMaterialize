@@ -1,0 +1,20 @@
+{
+  "langs": {
+    "name": "Git",
+    "fileTypes": [
+      ".git",
+      ".gitignore",
+      ".gitkeep",
+      ".gitconfig",
+      ".gitblame",
+      ".gitcommit",
+      ".gitgraph",
+      ".gitattributes",
+      ".git-blame",
+      ".git-commit",
+      ".git-graph"
+    ],
+    "includes": "source.shell",
+    "scopeName": "source.shell, source.git"
+  }
+}

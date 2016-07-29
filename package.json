@@ -1,6 +1,6 @@
 {
   "name": "re-materialize",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Simple Testing for lodash",
   "main": "gulpfile.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/thecodechef/re-materialize.git"
+    "url": "git+ssh://git@github.com/thecodechef/Rematerialize.git"
   },
   "keywords": [
     "material",
@@ -27,9 +27,10 @@
   "author": "Jeremy Bolding <cyberchefjay@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thecodechef/re-materialize/issues"
+    "url": "https://github.com/thecodechef/ReMaterialize/issues",
+    "known": "https://github.com/thecodechef/ReMaterialize#known-issues"
   },
-  "homepage": "https://github.com/thecodechef/re-materialize#readme",
+  "homepage": "https://github.com/thecodechef/ReMaterialize#readme",
   "dependencies": {
     "lodash": "^4.14.0"
   },

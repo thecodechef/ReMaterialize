@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Dockerfile",
+    "fileTypes": ["Dockerfile"],
+    "includes": "source.shell",
+    "scopeName": "source.shell, source.dockerfile"
+  }
+}

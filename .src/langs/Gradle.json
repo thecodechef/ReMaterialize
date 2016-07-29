@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Gradle",
+    "fileTypes": ["gradle"],
+    "includes": "source.groovy",
+    "scopeName": "source.groovy, source.gradle"
+  }
+}

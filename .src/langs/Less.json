@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Less",
+    "fileTypes": ["less"],
+    "includes": "source.css",
+    "scopeName": "source.css, source.less"
+  }
+}

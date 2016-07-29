@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Procfile",
+    "fileTypes": ["Procfile"],
+    "includes": "source.yaml",
+    "scopeName": "source.yaml, source.procfile"
+  }
+}

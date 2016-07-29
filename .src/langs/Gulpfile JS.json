@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Gulpfile JS",
+    "fileTypes": ["gulpfile.js","gulpfile.babel.js"],
+    "includes": "source.js",
+    "scopeName": "source.js, source.js.gulpfile"
+  }
+}

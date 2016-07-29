@@ -1,0 +1,8 @@
+{
+  "langs": {
+    "name": "Grunfile JS",
+    "fileTypes": ["gruntfile.js","gruntfile.babel.js"],
+    "includes": "source.js",
+    "scopeName": "source.js, source.js.gruntfile"
+  }
+}
